@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 from flask import Flask
 from flask import render_template
 from flask import redirect, url_for
@@ -6,6 +8,9 @@ app= Flask(__name__)
 
 @app.route('/')
 def index():
+        return render_template('main.html')
+@app.route('/1')
+def t1():
 	return render_template('page1.html') 
 @app.route('/2')
 def t2():
@@ -25,5 +30,6 @@ def t6():
 @app.route('/7')
 def t7():
 	return render_template('page7.html')
+
 if __name__ == '__main__':
 	app.run(debug=True)	
