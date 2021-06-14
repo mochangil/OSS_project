@@ -1,0 +1,5 @@
+https://movie.naver.com/movie/bi/mi/script.nhn?code=187322&order=best&nid=
+
+https://movie.naver.com/movie/bi/mi/script.nhn?code=204214&order=best&nid=
+
+코드 10000부터 시작
