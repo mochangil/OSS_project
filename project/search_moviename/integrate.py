@@ -16,10 +16,14 @@ def integrate(s):
 #	print(p3)
 	tototal=[p1[0]]
 #	print(tototal)
-	for i in range(0,len(p2)):
-		total1=[]
-		total1.append(p2[i])
-		total1.append(p3[i])
-		tototal.append(total1)
+	
+	if len(p2)==len(p3):	
+		for i in range(0,len(p2)):
+			total1=[]
+			if p3:
+				total1.append(p2[i])
+				total1.append(p3[i])
+			tototal.append(total1)
+		
 	print(tototal)
 	return tototal
