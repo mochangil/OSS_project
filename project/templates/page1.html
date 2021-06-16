@@ -10,14 +10,40 @@ h3{ color : puple;}
 <hr class=1>{ border : 5px solid yellowgreen;}
 <hr class=2>{ border : 1px solid black;}
 span{ color : blue; font-size : 20px;}
+.gotomain:hover{
+	color:rgb(0,154,200);
+	transition:0.5s ease-in-out;
+}
+.gotomain{
+	font-size:25px;
+	cursor:pointer;
+	transition:0.5s ease-in-out;
+}
+</style>
+<style type="text/css">
+	a:link{
+		color:black; text-decoration:none;}
+	a:visited{
+		color:black; text-decoration:none;}
+	a:hover{
+		color:blue; text-decoration:none;}
 </style>
 
 </head>
-<h3>명대사찾기 page 1</h3>
-<hr class=1>
-
+<div style="width:1500px; height:35px;border:0px; float:left; position:fixed; background-color:white; border-bottom:1px solid black;">
+	<div style="width:100px; height:35px;border:1px; float:left; margin-top:-10px; background-color:white;">
+		<a class="gotomain" href="/">Main</a>
+	</div>
+<div style="width:1000px height:30px; border:1px; background-color:white; margin-top:-22px">
 <form method="POST" action="comments.php">
-Search<input name="name" type="text" size="40"><br>
+	<h3>Search <input name="name" type="text" size="60">
+		<a class="btn" href="/1"><input type="button" value="검색"></a><br></h3>
+</div>
+</div>
+
+<br>
+<h3><br>page 1</h3>
+<hr class=1>
 <script>
 for(i=0;i<5;i++){
 document.write("<H3> ◎test1</H3><p>");
