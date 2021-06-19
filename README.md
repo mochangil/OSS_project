@@ -11,3 +11,5 @@ Datasearch 파일\
 
 es, search_moviename 파일\
 실행에 필요한 패키지들입니다.
+
+zip파일 이용해서 쉽게 다운 가능합니다!
