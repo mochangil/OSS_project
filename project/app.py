@@ -3,33 +3,50 @@
 from flask import Flask
 from flask import render_template
 from flask import redirect, url_for
+from flask import request
 
 app= Flask(__name__)
 
 @app.route('/')
 def index():
         return render_template('practice.html')
-@app.route('/1')
+        
+@app.route('/1',methods=['POST'])
 def t1():
-	return render_template('page1.html') 
-@app.route('/2')
+	if request.method=='POST':
+		result = request.form['search']
+		return render_template('page1.html',result=result) 
+		        
+@app.route('/2',methods=['POST'])
 def t2():
-	return render_template('page2.html')
-@app.route('/3')
+	if request.method=='POST':
+		result = request.form['search']
+		return render_template('page2.html',result=result) 
+		        
+@app.route('/3',methods=['POST'])
 def t3():
-	return render_template('page3.html')
-@app.route('/4')
+	if request.method=='POST':
+		result = request.form['search']
+		return render_template('page3.html',result=result) 
+		        
+@app.route('/4',methods=['POST'])
 def t4():
-	return render_template('page4.html')
-@app.route('/5')
+	if request.method=='POST':
+		result = request.form['search']
+		return render_template('page4.html',result=result) 
+		        
+@app.route('/5',methods=['POST'])
 def t5():
-	return render_template('page5.html')
-@app.route('/6')
+	if request.method=='POST':
+		result = request.form['search']
+		return render_template('page5.html',result=result) 
+		        
+@app.route('/6',methods=['POST'])
 def t6():
-	return render_template('page6.html')
-@app.route('/7')
-def t7():
-	return render_template('page7.html')
+	if request.method=='POST':
+		result = request.form['search']
+		return render_template('page6.html',result=result) 
+		
 
 if __name__ == '__main__':
 	app.run(debug=True)	
