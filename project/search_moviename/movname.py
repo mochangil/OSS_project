@@ -9,7 +9,7 @@ from elasticsearch import Elasticsearch
 from elasticsearch import helpers
 
 def hfilter(s):
-	hangle = re.compile('[^ ㄱ-ㅣ0-9가-힣]+')
+	hangle = re.compile('[^ㄱ-ㅣ0-9가-힣]+')
 	return hangle.sub('', s)
 	
 def movename(s):
@@ -19,12 +19,18 @@ def movename(s):
 	p=[]
 	text = hfilter(name.get_text())
 	p.append(text)
-		
-#	print(p)
+	
+	p1=p[0][:-4]
+	
+	if (p1[len(p1)-1]==p1[len(p1)-2]):
+		p1=p1[:-1]
+	p[0]=p1
+	
 	return p
 	
 if __name__ == '__main__':
-	movename('https://movie.naver.com/movie/bi/mi/scriptAndRelate.nhn?code=10002')
+
+	print(movename('10003'))
 	
 	
 	
