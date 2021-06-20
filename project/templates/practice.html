@@ -29,13 +29,11 @@
           <div class="search">
             <div class="search__bg"></div>
             <div class="search__box">
-              <input type="text" id="search" class="search__input" placeholder="Search" onkeypress="if(window.event.keyCode==13){test()}"/>
-              <script>
-                function test(){
-                  var x = document.getElementById("search").value;
-                  window.location.href="/1";
-                }
-              </script>
+            <form action="/1" method="POST">
+            <p>
+              <input id="searchInput" name="search" class="search__input" placeholder="Search"/>
+              </p>
+              </form>
               <div class="search__line"></div>
               <div class="search__close"></div>
             </div>
