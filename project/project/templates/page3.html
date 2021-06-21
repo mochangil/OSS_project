@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>
+명대사 찾기</title>
+<style>
+body {backgeound-color : mistyrodw;}
+h3{ color : puple;}
+<hr class=1>{ border : 5px solid yellowgreen;}
+<hr class=2>{ border : 1px solid black;}
+span{ color : blue; font-size : 20px;}
+.gotomain:hover{
+	color:rgb(0,154,200);
+	transition:0.5s ease-in-out;
+}
+.gotomain{
+	font-size:25px;
+	cursor:pointer;
+	transition:0.5s ease-in-out;
+}
+</style>
+<style type="text/css">
+	a:link{
+		color:black; text-decoration:none;}
+	a:visited{
+		color:black; text-decoration:none;}
+	a:hover{
+		color:blue; text-decoration:none;}
+</style>
+    
+</head>
+
+<body>
+<div style="width:1500px; height:40px;border:0px; float:left; position:fixed; background-color:white; border-bottom:1px solid black; margin-top:-4.3px">
+	<div style="width:100px; height:35px;border:1px; float:left; margin-top:-3px; background-color:white;">
+		<a class="gotomain" href="/">Main</a>
+	</div>
+<div style="width:1000px height:30px; border:1px; background-color:white; margin-top:-15px">
+<form action="/1" method="POST">
+	<h3>Search <input name="search" id="searchInput" size="60" value={{result}}><br></h3>
+	</form>
+	
+</div>
+</div>
+<br>
+<h3><br>page 3</h3>
+<hr class=1>
+<script>
+for(i=0;i<5;i++){
+document.write("<H3> ◎test1</H3><p>");
+document.write("<H5> ●test</H5><p>");
+document.write("<H5> ●text</H5><p>");
+document.write("<HR><p>");
+}
+</script>
+<div style="width:1500px; height:40px;border:0px; float:left; background-color:white;">
+	<div style="width:30px; height:30px;border:1px; float:left; margin-top:-3px; background-color:white;">
+		<form action="/1" method="POST">
+			<input type="hidden" name="search" value={{result}}>
+			<input type="submit" value="1">
+		</form>
+	</div>
+
+	<div style="width:30px; height:30px;border:1px; float:left; margin-top:-3px; background-color:white;">
+		<form action="/2" method="POST">
+			<input type="hidden" name="search" value={{result}}>
+			<input type="submit" value="2">
+		</form>
+	</div>	
+	
+	<div style="width:30px; height:30px;border:1px; float:left; margin-top:-3px; background-color:white;">
+		<input type="button" value="3" disabled="disabled">
+	</div>
+	
+	<div style="width:30px; height:30px;border:1px; float:left; margin-top:-3px; background-color:white;">
+		<form action="/4" method="POST">
+			<input type="hidden" name="search" value={{result}}>
+			<input type="submit" value="4">
+		</form>
+	</div>
+	
+	<div style="width:30px; height:30px;border:1px; float:left; margin-top:-3px; background-color:white;">
+		<form action="/5" method="POST">
+			<input type="hidden" name="search" value={{result}}>
+			<input type="submit" value="5">
+		</form>
+	</div>
+	
+	<div style="width:30px; height:30px;border:1px; float:left; margin-top:-3px; background-color:white;">
+		<form action="/6" method="POST">
+			<input type="hidden" name="search" value={{result}}>
+			<input type="submit" value="6">
+		</form>
+	</div>
+</div>
+
+</body>
+</html>

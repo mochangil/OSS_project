@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/practice.css')}}" type="text/css">
+  </head>
+    <body>
+    <div class="search-overlay"></div>
+      <div class="scroll-cont">
+      <span class="openmenu" onclick='openNav()'>Menu</span>
+        <div id="main" style="cursor:default;" onclick="closeNav();">
+
+        <script>
+                function openNav(){
+                        document.getElementById('mysidenav').style.width='250px';
+        		document.getElementById('main').style.marginLeft='0';
+			document.body.style.backgroundColor='rgba(0,0,0,0.4)';	
+		}
+                function closeNav(){
+                        document.getElementById('mysidenav').style.width = '0';
+                        document.getElementById('main').style.marginLeft='0';
+			document.body.style.backgroundColor='white';
+                }
+        </script>
+        <div class="content">
+          <div class="search">
+            <div class="search__bg"></div>
+            <div class="search__box">
+            <form action="/1" method="POST">
+            <p>
+              <input id="searchInput" name="search" class="search__input" placeholder="Search"/>
+              </p>
+              </form>
+              <div class="search__line"></div>
+              <div class="search__close"></div>
+            </div>
+          </div>
+        <p class="desc">테스트</p>
+      </div>
+    </div>
+    <script type="text/javascript" src="{{ url_for('static',filename='js/practice.js')}}"></script>
+    <div id="mysidenav" class="sidenav">
+                <a href="#" class="closebtn" onclick='closeNav()'>X</a>
+                <a href="./menu1">menu1</a>
+                <a href="./menu2">menu2</a>
+                <a href="./menu3">menu3</a>
+                <a href="./menu4">menu4</a>
+                <a href="./menu5">menu5</a>
+	</div>
+  </body>
+</html> 
