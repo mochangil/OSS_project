@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto</title>
+    <link rel="stylesheet" href="practice.css" type="text/css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="./data.js"></script>
+  </head>
+  <script>
+    $(function () {	//화면 로딩후 시작
+		$("#searchInput").autocomplete({  //오토 컴플릿트 시작
+			source: List,	// source는 data.js파일 내부의 List 배열
+			focus : function(event, ui) { // 방향키로 자동완성단어 선택 가능하게 만들어줌	
+				return false;
+			},
+			minLength: 1,// 최소 글자수
+			delay: 100,	//autocomplete 딜레이 시간(ms)
+			//disabled: true, //자동완성 기능 끄기
+		});
+	});
+</script>
+<body>
+    <div>
+		검색어<input id="searchInput" style="margin-left: 20px; width: 400px;">
+	</div>
+</body>
+</html>
